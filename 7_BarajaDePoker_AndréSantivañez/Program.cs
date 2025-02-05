@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -61,6 +62,32 @@ namespace _7_BarajaDePoker_AndréSantivañez
             }
             Console.WriteLine("No quedan cartas en el mazo.");
             return null;
+        }
+    }
+    class Program
+    {
+        static void Main()
+        {
+            Baraja baraja = new Baraja();
+            List<Carta> mano = new List<Carta>();
+            bool salir = false;
+
+            while (!salir)
+            {
+                Console.WriteLine("\nMenú");
+                Console.WriteLine("1. Barajar la baraja");
+                Console.WriteLine("2. Robar una carta");
+                Console.WriteLine("3. Mostrar mi mano");
+                Console.WriteLine("4. Salir");
+                Console.WriteLine("Seleccione una opcion: ");
+
+                string Console.ReadLine();
+
+                switch(opcion)
+                {
+
+                }
+            }
         }
     }
 }
