@@ -51,5 +51,16 @@ namespace _7_BarajaDePoker_AndréSantivañez
             Console.Clear();
             Console.WriteLine("Baraja mezclada correctamente. Roba una carta:");
         }
+        public Carta RobarCarta()
+        {
+            if (cartas.Count > 0)
+            {
+                Carta cartaRobada = cartas[0];
+                cartas.RemoveAt(0);
+                return cartaRobada;
+            }
+            Console.WriteLine("No quedan cartas en el mazo.");
+            return null;
+        }
     }
 }
