@@ -81,11 +81,37 @@ namespace _7_BarajaDePoker_AndréSantivañez
                 Console.WriteLine("4. Salir");
                 Console.WriteLine("Seleccione una opcion: ");
 
-                string Console.ReadLine();
+                string opcion = Console.ReadLine();
 
                 switch(opcion)
                 {
-
+                    case "1":
+                        baraja.Barajar();
+                        break;
+                    case "2":
+                        if (mano.Count < 7)
+                        {
+                            Carta nuevaCarta = baraja.RobarCarta();
+                            if (nuevaCarta != null)
+                            {
+                                mano.Add(nuevaCarta);
+                                Console.WriteLine($"Has robado: {nuevaCarta.Valor} de {nuevaCarta.Palo}");
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Tu mano ya tiene 7 cartas, no puedes más.");
+                        }
+                        break;
+                    case "3":
+                        MostrarMano(mano);
+                        break;
+                    case "4":
+                        salir = true;
+                        break;
+                    default:
+                        Console.WriteLine("Opción no válida, intenta de nuevo.");
+                        break;
                 }
             }
         }
