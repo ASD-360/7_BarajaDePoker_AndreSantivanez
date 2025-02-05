@@ -40,5 +40,16 @@ namespace _7_BarajaDePoker_AndréSantivañez
                 }
             }
         }
+        public void Barajar()
+        {
+            Random rng = new Random();
+            for (int i = 0; cartas.Count; i++)
+            {
+                int j = rng.Next(cartas.Count);
+                (cartas[i], cartas[j]) = (cartas[j], cartas[i]);
+            }
+            Console.Clear();
+            Console.WriteLine("Baraja mezclada correctamente. Roba una carta:");
+        }
     }
 }
