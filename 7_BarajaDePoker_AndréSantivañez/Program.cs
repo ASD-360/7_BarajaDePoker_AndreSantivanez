@@ -20,7 +20,7 @@ namespace _7_BarajaDePoker_AndréSantivañez
         }
         public void MostrarCarta()
         {
-            Console.WriteLine($"{Valor} de {Palo})");
+            Console.WriteLine($"{Valor} de {Palo}");
         }
     }
     class Baraja
@@ -86,9 +86,11 @@ namespace _7_BarajaDePoker_AndréSantivañez
                 switch(opcion)
                 {
                     case "1":
+                        Console.Clear();
                         baraja.Barajar();
                         break;
                     case "2":
+                        Console.Clear();
                         if (mano.Count < 7)
                         {
                             Carta nuevaCarta = baraja.RobarCarta();
@@ -100,16 +102,18 @@ namespace _7_BarajaDePoker_AndréSantivañez
                         }
                         else
                         {
-                            Console.WriteLine("Tu mano ya tiene 7 cartas, no puedes más.");
+                            Console.WriteLine("Tu mano ya tiene 7 cartas, no puedes más.Espabila hombre, que la avaricia rompe el saco.");
                         }
                         break;
                     case "3":
+                        Console.Clear();
                         MostrarMano(mano);
                         break;
                     case "4":
                         salir = true;
                         break;
                     default:
+                        Console.Clear();
                         Console.WriteLine("Opción no válida, intenta de nuevo.");
                         break;
                 }
@@ -119,10 +123,16 @@ namespace _7_BarajaDePoker_AndréSantivañez
         {
             Console.WriteLine("Tu mano actual:");
             if (mano.Count == 0)
+            {
                 Console.WriteLine("No tienes cartas en tu mano, no ves que no tienes ni una??");
+            }
             else
+            {
                 foreach (Carta carta in mano)
+                {
                     carta.MostrarCarta();
+                }
+            }
         }
 
     }
