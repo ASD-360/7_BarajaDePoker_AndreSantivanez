@@ -13,7 +13,7 @@ namespace _7_BarajaDePoker_AndréSantivañez
         public string Valor { get; set; }
 
         // El constructor
-        public Carta(string Palo, string Valor)
+        public Carta(string palo, string valor)
         {
             Palo = palo;
             Valor = valor;
@@ -44,7 +44,7 @@ namespace _7_BarajaDePoker_AndréSantivañez
         public void Barajar()
         {
             Random rng = new Random();
-            for (int i = 0; cartas.Count; i++)
+            for (int i = 0; i < cartas.Count; i++)
             {
                 int j = rng.Next(cartas.Count);
                 (cartas[i], cartas[j]) = (cartas[j], cartas[i]);
