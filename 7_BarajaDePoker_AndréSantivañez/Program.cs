@@ -115,5 +115,11 @@ namespace _7_BarajaDePoker_AndréSantivañez
                 }
             }
         }
+        static void MostrarMano(List<Carta> mano)
+        {
+            Console.WriteLine("Tu mano actual:");
+            if (mano.Count == 0)
+                Console.WriteLine("No tienes cartas en tu mano, no ves que no tienes ni una??");
+        }
     }
 }
